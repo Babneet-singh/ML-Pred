@@ -19,10 +19,3 @@ class CustomException(Exception):
 
     def __str__(self):
         return self.error_message
-
-if __name__ == "__main__":
-    try:
-        a = 1 / 0  # This will raise a ZeroDivisionError
-    except Exception as e:  # Catching the exception as 'e'
-        logging.error("Divide by zero")  # Log the error
-        raise CustomException(str(e), sys)  # Raise CustomException with the error message and sys
